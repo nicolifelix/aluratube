@@ -2,22 +2,15 @@ import config from "../config.json";
 import styled from "styled-components";
 import { CSSReset } from "../src/CSSReset";
 import { StyledTimeline } from "../src/components/Timeline";
-import Menu from "../src/components/Menu"
+import Menu from "../src/components/Menu";
+import Banner from "../src/components/Banner";
 
 function HomePage() {
-
-    const estiloDaHomePage = { 
-      // backgroundColor: "red" 
-    }
-
-    // console.log(config.playlists);
 
     return (
      <>
      <CSSReset />
-
-
-      <div style={estiloDaHomePage}>
+      <div>
         <Menu />
         <Header />
         <Timeline  playlists={config.playlists}/>
@@ -29,10 +22,8 @@ function HomePage() {
   
   export default HomePage
 
-
-
   const StyledHeader = styled.div`
-    img {
+    .user {
       width: 80px;
       height: 80px;
       border-radius: 50%;
@@ -49,9 +40,9 @@ function HomePage() {
   function Header(){
     return(
       <StyledHeader>
-        <img src="" alt="banner" />
+       <Banner />
         <section className="user-info">
-          <img src={`https://github.com/${config.github}.png`} />
+          <img className="user" src={`https://github.com/${config.github}.png`} />
           <div>
             <h2>{config.name}</h2>
             <p>{config.job}</p>
