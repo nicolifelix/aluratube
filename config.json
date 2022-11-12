@@ -2,6 +2,16 @@
   "name": "Nicoli Félix",
   "job": "Front-End Developer",
   "github": "nicolifelix",
+  "favorites": [
+    {
+      "name": "omariosouto",
+      "photo": "https://github.com/omariosouto.png"
+    },
+    {
+      "name": "peas",
+      "photo": "https://github.com/peas.png"
+    }
+  ],
   "playlists": {
     "jogos": [
         {
