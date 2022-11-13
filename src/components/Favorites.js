@@ -8,20 +8,20 @@ const StyledFav = styled.section`
     gap: 10px 26px;
     padding: 20px;
     h2 {
-        font-size: 16px;
-    margin-bottom: 16px;
-    text-transform: capitalize;
-        width: 100%;
+      font-size: 16px;
+      margin-bottom: 16px;
+      text-transform: capitalize;
+      width: 100%;
     }
     div {
       display: flex;
-        flex-direction: column;
-        align-items: center;
-      img {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-      }
+      flex-direction: column;
+      align-items: center;
+        img {
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+        }
     }
   `;
 
@@ -39,7 +39,6 @@ export default function Favorites(props){
              <img src={favorite.photo}/>
              <span>{`@${favorite.name}`}</span>
             </div>
-           
           )
         }))
       }
