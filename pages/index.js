@@ -6,6 +6,7 @@ import { StyledTimeline } from "../src/components/Timeline";
 import Menu from "../src/components/Menu";
 import Banner from "../src/components/Banner";
 import Favorites from "../src/components/Favorites";
+import Timeline from "../src/components/Timeline";
 
 function HomePage() {
   const [valorDoFiltro, setvalorDoFiltro] = React.useState("");
@@ -56,39 +57,4 @@ function HomePage() {
     )
   }
 
-  function Timeline({searchValue, ...props}){
-    // console.log('props', props);
-    const playlistNames = Object.keys(props.playlists);
-    return(
-      <StyledTimeline>
-        {playlistNames.map((playlistName) => {
-          const videos = props.playlists[playlistName]
-          // console.log(videos);
-          // console.log(playlistNames);
-          return (
-            <section key={playlistName}>
-              <h2>{playlistName}</h2>
-              <div>
-                {
-                  videos.filter((video) => {
-                    const titleNormalized = video.title.toLowerCase();
-                    const searchValueNormalized = searchValue.toLowerCase();
-                    return titleNormalized.includes(searchValueNormalized)
-                  }).map((video) => {
-                    return (
-                      <a key={video.url} href={video.url}>
-                        <img src={video.thumb} />
-                        <span>
-                          {video.title}
-                        </span>
-                      </a>
-                    )
-                  })
-                }
-              </div>
-            </section>
-          )
-        })}
-      </StyledTimeline>
-    )
-  }
+  
